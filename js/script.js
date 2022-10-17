@@ -22,9 +22,16 @@ function play(){
         square.innerHTML = `
         <span>${num}</span>
         `;
-        return square;
+        
+        square.addEventListener('click', function(){
+            this.classList.add('clicked');
+        })
+    
+        return square; 
     }
     createSquare(num);
+
+    
 
     function createGrid(){
         const grid = document.createElement('div');
