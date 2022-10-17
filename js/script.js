@@ -25,6 +25,7 @@ function play(){
         
         square.addEventListener('click', function(){
             this.classList.add('clicked');
+            console.log("Hai cliccato la cella nr." + num);
         })
     
         return square; 
