@@ -1,0 +1,30 @@
+header {
+    height: 70px;
+    background-color: azure;
+} 
+
+main {
+    background-color: antiquewhite;
+    height: calc(100vh - 140px);
+    overflow-y: auto;
+}
+
+footer {
+    height: 70px;
+    background-color: azure;
+}
+
+.grid {
+    border: 1px solid black;
+    /* height: 500px; */
+    width: 500px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.square {
+    border: 1px solid black;
+    height: 50px;
+    width: calc(100% / 10);
+}
