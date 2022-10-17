@@ -15,9 +15,8 @@ footer {
 }
 
 .grid {
-    border: 1px solid black;
-    height: 500px; 
-    width: 500px;
+    height: 400px; 
+    width: 400px;
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
@@ -26,9 +25,10 @@ footer {
 }
 
 .square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid black;
-    height: calc(100% / 10);
-    width: calc(100% / 10);
     cursor: pointer;
 }
 
