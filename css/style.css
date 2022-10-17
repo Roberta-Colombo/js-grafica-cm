@@ -35,3 +35,7 @@ footer {
 .clicked {
     background-color: aquamarine;
 }
+
+.bomb {
+    background-color: red;
+}

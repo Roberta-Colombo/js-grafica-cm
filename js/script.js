@@ -31,8 +31,7 @@ function play(){
             numOfSquares = 49;
         break;           
     }
-
-    
+   
     let num;
     function createSquare(num){
         let squaresPerSide = Math.sqrt(numOfSquares);
@@ -53,7 +52,6 @@ function play(){
     }
     createSquare(num);
     
-
     function createGrid(){
         const grid = document.createElement('div');
         grid.className = 'grid';
@@ -64,6 +62,20 @@ function play(){
         playfield.appendChild(grid);
     }   
     createGrid();
+
+    function placeBombs(){
+        const bombsArray = [];
+        let i = 1;
+        while(i <= 16){
+            const bomb = randomNumber(1, numOfSquares);
+                if(!bombsArray.includes(bomb)){
+                    bombsArray.push(bomb);
+                    i++;  
+                }
+        }
+        console.log(bombsArray);
+    }
+    placeBombs();
 }
 
 
