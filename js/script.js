@@ -16,7 +16,8 @@ function play(){
     const playfield = document.querySelector('.playfield');
     playfield.innerHTML = '';
     const level = document.getElementById('level').value;
-    // console.log(level);
+    const bombsArray = [];
+    let i = 1;
 
     let numOfSquares;
     switch(level){
@@ -31,6 +32,20 @@ function play(){
             numOfSquares = 49;
         break;           
     }
+
+    function placeBombs(){
+        // const bombsArray = [];
+        // let i = 1;
+        while(i <= 16){
+            const bomb = randomNumber(1, numOfSquares);
+                if(!bombsArray.includes(bomb)){
+                    bombsArray.push(bomb);
+                    i++;  
+                }
+        }
+        console.log(bombsArray);
+    }
+    placeBombs();
    
     let num;
     function createSquare(num){
@@ -46,8 +61,10 @@ function play(){
         square.addEventListener('click', function(){
             this.classList.add('clicked');
             console.log("Hai cliccato la cella nr." + num);
+            if(bombsArray.includes(num)){
+               this.classList.add('bomb');
+            }
         })
-    
         return square; 
     }
     createSquare(num);
@@ -62,20 +79,6 @@ function play(){
         playfield.appendChild(grid);
     }   
     createGrid();
-
-    function placeBombs(){
-        const bombsArray = [];
-        let i = 1;
-        while(i <= 16){
-            const bomb = randomNumber(1, numOfSquares);
-                if(!bombsArray.includes(bomb)){
-                    bombsArray.push(bomb);
-                    i++;  
-                }
-        }
-        console.log(bombsArray);
-    }
-    placeBombs();
 }
 
 
