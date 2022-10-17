@@ -16,15 +16,16 @@ footer {
 
 .grid {
     border: 1px solid black;
-    /* height: 500px; */
+    height: 500px; 
     width: 500px;
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
+    margin-top: 40px;
 }
 
 .square {
     border: 1px solid black;
-    height: 50px;
+    height: calc(100% / 10);
     width: calc(100% / 10);
 }
